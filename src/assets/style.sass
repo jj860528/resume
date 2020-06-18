@@ -1,0 +1,197 @@
+* 
+    padding: 0;
+    margin: 0;
+    list-style-type: none
+    font-family: Microsoft JhengHei !important;
+/*-------------------設定當前路由css----------------------*/
+.router-link-active
+    color: #6fa0ce !important
+/*主體大小*/ 
+.main-container
+    display: flex;
+    align-self: center
+    padding: 50px
+    max-width: 50%
+    margin: auto;
+/*nav導航*/    
+.main-header
+    height: 100%
+    background-color: #2e2e2a
+    .container
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        max-width: 100%;
+        margin: auto;
+    .main-nav
+        margin: 0px auto;
+        a 
+            text-decoration: none;
+            color: #d6d7e7;
+            padding: 5px 2em;
+            position: relative;
+            transition: 0.3s
+            font-size: 18px
+        a:hover
+            color: #6fa0ce
+        a:after
+            content: ''
+            position: absolute
+            left: 50%
+            right: 50%
+            bottom: -5px
+            height: 0
+            border-bottom: 3px solid #00b1f7
+            transition: 0.3s
+            font-size: 3px
+        a:hover:after
+            left: 0
+            right: 0
+.community
+    margin: 10px auto;
+    text-align: center;
+    .link
+        position: relative;
+        a
+            color: #68a179
+            text-decoration: none;
+            padding: 20px 2em;
+            position: relative;
+            font-size: 15px;
+            transition: 0.3s
+        a:hover
+            color: #a6c4af
+            font-size: 18px
+.main-personal
+    padding: 30px;
+    margin: auto;
+    img
+        border-radius: 50%
+        width: 180px
+        height: 180px;
+        display: block; 
+        margin: 10px auto;
+    h1
+        height: 100%
+        width: 100%
+        text-align: center;
+        margin: auto;
+        color: #fff
+    h2
+        height: 100%
+        width: 100%
+        text-align: center;
+        margin: auto;
+        color: #fff
+        padding: 10px;
+/*-------------------about----------------------*/
+.main-about
+    height: 100%
+    .community
+        display: flex
+        align-self: center
+        flex-direction: column;
+        text-align: left
+        line-height: 50px
+        text-indent: 25px
+        h1
+            text-indent: 0px
+            color: #0bbfc5
+        .skills
+            padding: 30px 0
+            nav
+                display: flex
+                margin: auto
+                flex-direction: row;
+                width: 100%
+                ul
+                    flex-grow: 1;
+                    color: #1bb3df
+                h2
+                    border-top: 3px solid #bed1d8
+                ul  
+                    margin: 20px 60px 
+                ul >*
+                    color: #618383 
+/*-------------------專案----------------------*/
+.main-project
+    height: 100%
+    width: 100%
+    .community
+        display: flex
+        align-self: center
+        flex-direction: column;
+        text-align: left
+        width: 100%
+        .project
+            border: 1px solid #919696
+            border-radius: 5px
+            display: flex
+            margin: 30px 10px
+            flex-direction: row;
+            width: 100%
+            height: 350px
+            .project-img
+                flex: 1 1 auto;
+                width: 400px
+                height: 100%
+                position: relative;
+                background-position: center center
+                background-repeat: no-repeat
+                background-size: cover
+                img
+                    width: 100%
+                    height: 100%
+                    border-radius: 5px
+                .mask
+                    height: 100%
+                    width: 100%
+                    position: absolute
+                    top: 0
+                    left: 0
+                    background: rgba(56, 70, 83, 0.6);
+                    opacity: 0    
+                    transition: .3s
+                    margin: auto;
+                    button
+                        width: 100px
+                        height: 50px
+                        border: 2px solid #b3d8ff
+                        margin: 0 auto
+                        position: absolute
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #409eff
+                        border-radius: 10px
+                        outline: none
+                        transition: .5s
+                    button:hover
+                        color: #ffffff
+                        background-color: #40a0ff9c
+                .mask:hover
+                    opacity: 1
+            .introduction
+                flex: 2 1 auto;
+                border-left: 1px solid #919696
+                padding: 10px 30px
+                line-height: 40px
+                ul
+                    padding: 10px
+/*-------------------履歷----------------------*/
+.main-resume
+    width: 100%
+    height: 100%
+    button
+        width: 100px
+        height: 50px
+        border: 2px solid #b3d8ff
+        margin: 0 auto
+        color: #409eff
+        border-radius: 10px
+        outline: none
+        transition: .5s
+    button:hover
+        color: #ffffff
+        background-color: #40a0ff9c
