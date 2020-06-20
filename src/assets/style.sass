@@ -133,6 +133,7 @@
             width: 100%
             height: 350px
             .project-img
+                border-radius: 5px
                 flex: 1 1 auto;
                 width: 400px
                 height: 100%
@@ -140,6 +141,28 @@
                 background-position: center center
                 background-repeat: no-repeat
                 background-size: cover
+                .Imgloading
+                    border-radius: 5px
+                    width: 100%
+                    height: 100%
+                    background-color: #ffffff
+                    opacity: 3
+                    position: relative
+                    &:after
+                        content: "圖片加載中"
+                    &:before
+                        content: ""
+                        position: absolute
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: auto
+                        height: 80px
+                        width: 80px
+                        border-right: 5px solid #40a0ff9c
+                        border-radius: 50%
+                        animation: Imgloading .8s ease-in infinite
                 img
                     width: 100%
                     height: 100%
@@ -195,3 +218,9 @@
     button:hover
         color: #ffffff
         background-color: #40a0ff9c
+/*-------------------動畫----------------------*/
+@keyframes Imgloading
+    0%
+        transform: rotate(0deg);
+    100%
+        transform: rotate(360deg);

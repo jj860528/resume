@@ -1,10 +1,12 @@
 <template>
   <div class="project">
-    <div class="project-img img" :style ="img">
-      <div class="mask">
-        <a :href="project.url">
-          <button>前往網站</button>
-        </a>
+    <div class="project-img img" :style="img">
+      <div :class="{Imgloading:Imgloading}">
+        <div class="mask">
+          <a :href="project.url">
+            <button>前往網站</button>
+          </a>
+        </div>
       </div>
     </div>
     <div class="introduction">
@@ -23,19 +25,27 @@ export default {
   props: {
     ProjectItem: {
       type: Object,
-      required: true,
+      required: true
     }
   },
   data() {
     return {
+      Imgloading: true,
       project: this.ProjectItem,
-      img:{
-        backgroundImage: "url("+require('../assets/'+this.ProjectItem.img)+")",
+      img: {
+        backgroundImage: "url(" + this.ProjectItem.img + ")",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundSize: "cover"
       }
     };
+  },
+  mounted:function(){
+    //圖片載入動畫
+    let image = new Image()
+    image.onload = () =>
+      this.Imgloading = false
+    image.src = this.ProjectItem.img
   }
 };
 </script>
