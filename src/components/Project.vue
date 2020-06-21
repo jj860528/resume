@@ -3,7 +3,7 @@
     <div class="project-img img" :style="img">
       <div :class="{Imgloading:Imgloading}">
         <div class="mask">
-          <a :href="project.url">
+          <a @click="go(project.url)">
             <button>前往網站</button>
           </a>
         </div>
@@ -46,6 +46,10 @@ export default {
     image.onload = () =>
       this.Imgloading = false
     image.src = this.ProjectItem.img
+  },
+  methods:{
+    go:(val)=>
+      window.open(val)
   }
 };
 </script>

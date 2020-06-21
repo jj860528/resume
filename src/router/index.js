@@ -10,6 +10,7 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    redirect: { name: 'About' },//重定向 初始子組件
     children:[
       {
         path: "/about",

@@ -7,8 +7,8 @@
         <h2>前端工程師．New Taipei．jj860528@gmail.com</h2>
         <div class="community">
           <nav class="link">
-            <a href="https://github.com/jj860528" alt="Github">Github</a>
-            <a href="https://www.facebook.com/chen.gavin.35" alt="Fackbook">Fackbook</a>
+            <a alt="Github" @click="go('https://github.com/jj860528')">Github</a>
+            <a alt="Fackbook" @click="go('https://www.facebook.com/chen.gavin.35')">Fackbook</a>
           </nav>
         </div>
       </div>
@@ -25,6 +25,10 @@ export default {
   data() {
     return {
     };
+  },
+  methods:{
+    go:(val)=>
+      window.open(val)
   }
 };
 </script>
