@@ -46,7 +46,6 @@ export default new Vuex.Store({
           {skill:"Vue"},
           {skill:"Veux"},
           {skill:"Vue-Router"},
-          {skill:"Sass"},
         ],
       },
       {
