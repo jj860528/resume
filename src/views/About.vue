@@ -8,7 +8,21 @@
     </section>
     <section class = "about-section">
       <h1 class = "title">相關技能</h1>
-      <p class = "content">大家好</p>
+      <div class = "skills">
+        <ul v-for="(skills, index) in SkillsData" :key = "index">
+          <h1>{{skills.name}}</h1>
+          <li v-for="(skill, index) in skills.skills" :key = "index">{{skill.skill}}</li>
+        </ul>
+      </div>
     </section>
   </div>
 </template>
+<script>
+export default {
+  data(){
+    return{
+      SkillsData: this.$store.state.skills
+    }
+  }
+}
+</script>

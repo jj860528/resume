@@ -99,6 +99,15 @@
         box-shadow: 0 0 .5em red;
         position: relative
         margin: 3em 0
+        .title
+            line-height: 3em
+        .skills
+            display: flex
+            flex-flow: row
+            justify-content: space-around
+            li
+                line-height: 3em
+
 /*-------------------專案----------------------*/
 .main-project
     height: 100%
@@ -110,7 +119,8 @@
         text-align: left
         width: 100%
         .project
-            border: 1px solid #919696
+            border: 1px solid #40a0ff9c
+            box-shadow: 0 0 .5em #40a0ff9c;
             border-radius: 5px
             display: flex
             margin: 30px 10px
@@ -118,7 +128,8 @@
             width: 100%
             height: 350px
             .project-img
-                border-radius: 5px
+                border-top-left-radius: 5px
+                border-bottom-left-radius: 5px
                 flex: 1 1 auto;
                 width: 400px
                 height: 100%
@@ -151,7 +162,7 @@
                 img
                     width: 100%
                     height: 100%
-                    border-radius: 5px
+                    
                 .mask
                     height: 100%
                     width: 100%
