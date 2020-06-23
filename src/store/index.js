@@ -63,6 +63,19 @@ export default new Vuex.Store({
         ],
       }
     ],
+    articles:[
+      {
+        name:'Google第三方登入',
+        Date:'2020 06',
+        img:'https://i.imgur.com/HxEZMvSh.jpg?3',
+        content:[
+          {
+            name:"pre",
+            content:'還沒準備好=.='
+          }
+        ]
+      }
+    ]
   },
   mutations: {},
   actions: {},
