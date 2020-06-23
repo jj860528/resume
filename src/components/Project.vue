@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="introduction">
-      <h2>{{project.name}}</h2>
+      <h2  @click="go(project.url)">{{project.name}}</h2>
       <b>{{project.introduction}}</b>
       <p>相關技術</p>
       <ul>
