@@ -15,9 +15,8 @@
       <nav class="main-nav">
         <router-link to="/about">關於</router-link>
         <router-link to="/project">專案</router-link>
-        <!-- 還沒開始寫
-          <router-link to="/article">文章</router-link>
-        -->
+        <!-- 還沒開始寫-->
+        <router-link to="/article">文章</router-link>
       </nav>
     </div>
   </header>

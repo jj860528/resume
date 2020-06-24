@@ -65,16 +65,51 @@ export default new Vuex.Store({
     ],
     articles:[
       {
-        name:'Google第三方登入',
-        Date:'2020 06',
-        img:'https://i.imgur.com/HxEZMvSh.jpg?3',
+        id: 'Articles01',
+        name:'Google第三方登入實作',
+        date:'2020 06',
+        img:'https://i.imgur.com/5Fa5Myg.jpg',//略縮圖
         content:[
           {
+            order:'01',
+            name:'text',
+            content:'<p>現在其實可以發現<br />許多網站和線上遊戲<br />都有支援第三方登入<br />方便使用者不用記帳號(email)和密碼<br />GCP OAuth算是普遍大家都有的服務<br />所以開發使用者登入功能時<br />別忘了第三方登入這一塊</p>'
+          },
+          {
+            order:"02",
             name:"pre",
-            content:'還沒準備好=.='
+            content:'<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;p&gt;內容&lt;/ p&gt; </span></span><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;p&gt;＆nbsp; &lt;/ p&gt; </span></span><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;p&gt; function（）{&lt;/ p&gt; </span></span><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;p&gt;＆nbsp; </span><span style="vertical-align: inherit;">＆nbsp; 121 561 65 1 &lt;/ p&gt; </span></span><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;p&gt;} &lt;/ p&gt;</span></span></p>'
+          },
+          {
+            order:"03",
+            name:"img",
+            content:"圖片地址"
           }
         ]
-      }
+      },
+      /*{
+        id: 'Articles02',
+        name:'Google第三方登入',
+        date:'2020 06',
+        img:'https://i.imgur.com/5Fa5Myg.jpg',//略縮圖
+        content:[
+          {
+            order:'01',
+            name:'text',
+            content:'<p><em><strong>以下為例子~~</strong></em></p>'
+          },
+          {
+            order:"02",
+            name:"pre",
+            content:'<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;p&gt;內容&lt;/ p&gt; </span></span><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;p&gt;＆nbsp; &lt;/ p&gt; </span></span><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;p&gt; function（）{&lt;/ p&gt; </span></span><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;p&gt;＆nbsp; </span><span style="vertical-align: inherit;">＆nbsp; 121 561 65 1 &lt;/ p&gt; </span></span><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&lt;p&gt;} &lt;/ p&gt;</span></span></p>'
+          },
+          {
+            order:"03",
+            name:"img",
+            content:"圖片地址"
+          }
+        ]
+      }*/
     ]
   },
   mutations: {},

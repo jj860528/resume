@@ -223,14 +223,40 @@
     display: flex
     flex-flow: row wrap
     justify-content: start
-    align-items: center
+    align-items: start
     padding: 15px
-    text-align: center
     .article
+        width: 100%
+        height: 100%
         flex: 0 0 45%
         margin: 1em
         line-height: 2em
-
+        flex-direction: column
+        text-align: left
+        .article-img
+            width: 100%
+            height: 250px
+            border: 1px solid #9494946c
+        .article-container
+            margin: 1em
+            width: 100%
+            height: 20vh
+            .article-title
+                display: inline
+                margin-bottom: 15px
+                background: linear-gradient(90deg,#7c7777 50%, transparent 0) repeat-x;
+                background-size: .5em 2px;
+                background-position: -5em 1.15em ;
+                transition: 1s
+            .article-title:hover
+                background-position: 0 1.15em;
+                color: #00000070
+            .article-content
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                /*设置省略号在容器第四行文本后*/
+                -webkit-line-clamp: 4; 
+                overflow: hidden;
 /*-------------------動畫----------------------*/
 @keyframes Imgloading
     0%
