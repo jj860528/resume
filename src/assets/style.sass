@@ -145,24 +145,26 @@
                     opacity: 3
                     position: relative
                     &:after
-                        content: "圖片加載中"
-                    &:before
-                        content: ""
-                        position: absolute
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        margin: auto
+                        position: absolute;
+                        content: "";
+                        top: 0px;
+                        left: 0px;
+                        right: 0px;
+                        bottom: 0px;
+                        box-sizing: border-box;
+                        border-radius: 50%;
                         height: 80px
                         width: 80px
-                        border-right: 5px solid #40a0ff9c
-                        border-radius: 50%
-                        animation: Imgloading .8s ease-in infinite
+                        margin: auto
+                        border-top: 3px solid #40a0ff9c;
+                        border-left: 3px solid #40a0ff9c;
+                        border-bottom: 3px solid transparent;
+                        border-right: 3px solid transparent;
+                        transform: rotate(720deg);
+                        animation: Imgloading .8s infinite ease-out;
                 img
                     width: 100%
                     height: 100%
-                    
                 .mask
                     height: 100%
                     width: 100%
@@ -196,10 +198,21 @@
                 border-left: 1px solid #919696
                 padding: 10px 30px
                 line-height: 40px
+                b
+                    display: block
                 ul
                     padding: 10px
                 h2
+                    display: inline
+                    margin-bottom: 15px
+                    background: linear-gradient(90deg,#b9b4b4 50%, transparent 0) repeat-x;
+                    background-size: .5em 2px;
+                    background-position: -5em 1.15em ;
+                    transition: 1s
                     cursor: pointer
+                h2:hover
+                    background-position: 0 1.15em;
+                    color: #11111170
 /*-------------------履歷----------------------*/
 .main-resume
     width: 100%
@@ -234,9 +247,34 @@
         flex-direction: column
         text-align: left
         .article-img
+            transition: 1s
             width: 100%
             height: 250px
             border: 1px solid #9494946c
+            position: relative
+            cursor: pointer
+            &:after
+                content: ''
+                height: 100%
+                width: 100%
+                position: absolute
+                bottom: 0
+                right: 0
+                left: 0
+                top: 0
+                transition: 1s
+        .article-img:hover
+            &:after
+                content: ''
+                height: 100%
+                width: 100%
+                position: absolute
+                bottom: 0
+                right: 0
+                left: 0
+                top: 0
+                background: hsla(0,0,100%,.5)
+                filter: blur(3px)
         .article-container
             margin: 1em
             width: 100%
@@ -248,6 +286,7 @@
                 background-size: .5em 2px;
                 background-position: -5em 1.15em ;
                 transition: 1s
+                cursor: pointer
             .article-title:hover
                 background-position: 0 1.15em;
                 color: #00000070
