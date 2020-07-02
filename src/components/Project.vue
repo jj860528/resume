@@ -44,7 +44,7 @@ export default {
     //圖片載入動畫
     let image = new Image()
     image.onload = () =>
-      this.Imgloading = false
+    this.Imgloading = false
     image.src = this.ProjectItem.img
   },
   methods:{

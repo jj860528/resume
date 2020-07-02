@@ -1,30 +1,27 @@
 <template>
-  <div :class="myloading" :imgTime = "imgTime"></div>
+  <div class="myloading" v-if = "isLoading"></div>
 </template>
 <script>
 export default {
   name: "loading",
-  props:{
-    myloading:{
-      type: Boolean || true,
-    },
-    imgTime:{
-      type:String,
-      default:false
+  props: {
+    source: {
+      type: Boolean,
+      require: true,
+      default: true
     }
   },
   data() {
     return {
-      loading: this.loading,
-      img: this.imgTime
+      isLoading: true
     };
   },
-  mounted: function() {
-    //圖片載入動畫
-    let image = new Image();
-    image.onload = () => (this.loading = true);
-    image.src = this.img;
-    console.log('OK')
+  watch: {
+    source: function(newValue, oldValue) {
+      if (!newValue) {
+        this.isLoading = false;
+      }
+    }
   }
 };
 </script>
