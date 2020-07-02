@@ -1,12 +1,14 @@
 <template>
-  <quillEditor
-    v-model="content"
-    ref="myQuillEditor"
-    :options="editorOption"
-    @blur="onEditorBlur($event)"
-    @focus="onEditorFocus($event)"
-    @change="onEditorChange($event)"
-  ></quillEditor>
+  <div class = "editor">
+    <quillEditor
+      v-model="content"
+      ref="myQuillEditor"
+      :options="editorOption"
+      @blur="onEditorBlur($event)"
+      @focus="onEditorFocus($event)"
+      @change="onEditorChange($event)"
+    ></quillEditor>
+  </div>
 </template>
 <script>
 import "quill/dist/quill.core.css";
@@ -25,7 +27,7 @@ export default {
     onEditorBlur() {}, // 失去焦點觸發事件
     onEditorFocus() {}, // 獲得焦點觸發事件
     onEditorChange() {
-        console.log(this.content)
+      console.log(this.content);
     } // 內容改變觸發事件
   },
   components: {
