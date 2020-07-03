@@ -37,7 +37,6 @@ export default {
     let image = new Image();
     image.onload = () => {
       this.loading = false;
-      console.log(this.loading);
     };
     image.src = this.imgTime;
     
