@@ -1,3 +1,6 @@
+import firebase from 'firebase';
+import 'firebase/firestore';
+
 const firebaseConfig = {
   apiKey: "AIzaSyAVpJe2882o24RSqPZiulPRXxwKiDTss-c",
   authDomain: "blog-b8466.firebaseapp.com",
@@ -9,9 +12,11 @@ const firebaseConfig = {
   measurementId: "G-5NB5LGHTP6"
 };
 
-const firebase = require("firebase");
+/*const firebase = require("firebase");
 // Required for side-effects
-require("firebase/firestore");
+require("firebase/firestore");*/
+
+
 //初始化
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
@@ -28,7 +33,7 @@ projectRef.get().then((data) => {
 })
 
 //articles
-const articlesRef= db.collection("articles")
+const articlesRef = db.collection("articles")
 const articles = []
 articlesRef.get().then((data) => {
   data.forEach((doc) => {
@@ -36,12 +41,18 @@ articlesRef.get().then((data) => {
   })
 })
 
-/*新增資料
-const citiesRef = db.collection('//文件名//');
+export function setArticle(id, data) {
+  const Ref = db.collection('articles').doc("articles" + id + " ");
+  console.log(data)
+  let setSf = Ref.set(data)
+  .then(function () {
+    alert("Document successfully written!");
+  })
+    .catch(function (error) {
+      console.error("Error writing document: ", error);
+    });
 
-let setSf = citiesRef.doc("//放入文件名+id//").set({
-  //放入data
-});*/
+}
 
 //匯出至store
-export default { project , articles};
+export default { db, project, articles };

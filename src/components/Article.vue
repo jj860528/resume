@@ -5,7 +5,7 @@
     </div>
     <div class="article-container">
       <h2 class="article-title" @click="go()">{{article.name}}</h2>
-      <pre class="article-content" v-html="content[0].content"></pre>
+      <p class="article-content" v-html="introduction"></p>
     </div>
   </div>
 </template>
@@ -24,6 +24,7 @@ export default {
       loading: true,
       imgTime: this.Article.img,
       article: this.Article,
+      introduction: this.Article.introduction,
       content: this.Article.content || "暫無內容",
       img: {
         backgroundImage: "url(" + this.Article.img + ")",

@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     go: val => window.open(val),
-    aaheight: function(val){
+    fixedheight: function(val){
       //頁面高度
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       const fixedheght = scrollTop-this.Navheight
@@ -44,8 +44,8 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.aaheight) //監聽滑鼠滾動
-    var height = this.$refs.Navheight.getBoundingClientRect().top
+    window.addEventListener('scroll', this.fixedheight) //監聽滑鼠滾動
+    //var height = this.$refs.Navheight.getBoundingClientRect().top
     //this.Navheight = height
   },
   watch: {
