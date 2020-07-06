@@ -6,7 +6,7 @@
         <input v-model="name" placeholder="主題名" />
 
         <label>屬性</label>
-        <input v-model="type" placeholder="可能的標籤" />
+        <input v-model="type" placeholder="ex:articles && projects" />
 
         <label>圖片地址</label>
         <input v-model="img" placeholder="略縮圖地址" />
