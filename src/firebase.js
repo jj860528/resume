@@ -37,12 +37,14 @@ const articlesRef = db.collection("articles")
 const articles = []
 articlesRef.get().then((data) => {
   data.forEach((doc) => {
-    articles.push(doc.data())
+    const article = doc.data()
+    article["id"] = doc.id
+    articles.push(article)
   })
 })
 
-export function setArticle(id, data) {
-  const Ref = db.collection('articles').doc("articles" + id + " ");
+export function setArticle(sort, data) {
+  const Ref = db.collection(sort).doc();
   console.log(data)
   let setSf = Ref.set(data)
   .then(function () {

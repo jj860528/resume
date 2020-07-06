@@ -6,13 +6,17 @@
         <input v-model="name" placeholder="主題名" />
 
         <label>屬性</label>
-        <input v-model="type" placeholder="ex:articles && projects" />
+        <input v-model="type" placeholder="ex:前端" />
 
         <label>圖片地址</label>
         <input v-model="img" placeholder="略縮圖地址" />
 
-        <label>id</label>
-        <input v-model="id" placeholder="ex:01,02" />
+        <label>分類</label>
+        <select v-model="sort">
+          <option disabled value="">请选择</option>
+          <option>articles</option>
+          <option>objects</option>
+        </select>
 
         <label>介紹</label>
         <input v-model="introduction" placeholder="ex:介紹一下 通常複製前言貼上就好" />
@@ -42,6 +46,7 @@ export default {
       type: "",
       img: "",
       id: "",
+      sort:"",
       introduction:"",
       date: new Date(),
       content: "<p>多寫一點</p>", //雙向數據綁定數據
@@ -59,11 +64,10 @@ export default {
       article["name"] = this.name
       article["type"] = this.type
       article["img"] = this.img
-      article["id"] = this.id
       article["date"] = this.date
       article["content"] = this.content
       article["introduction"] = this.introduction
-      setArticle(this.id, article)
+      setArticle(this.sort, article)
     }
   },
   components: {
