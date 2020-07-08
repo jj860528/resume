@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: '/resume',
+    publicPath: './',
     chainWebpack: config => {
         config.module.rules.delete('eslint');
     }
