@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Projects from "@/views/Projects.vue";
 import Article from "@/views/Articles.vue";
 import Editor from "@/views/Editor.vue"
+import Paper from "@/views/Paper.vue"
 
 Vue.use(VueRouter);
 
@@ -31,12 +32,18 @@ const routes = [
       {
         path: "/article",
         name: "Article",
-        component: Article
+        component: Article,
       },
       {
         path: "/editor",
         name: "editor",
         component: Editor
+      },
+      {
+        //動態路由開頭加問號表示非必填
+        path: "paper",
+        name: "paper",
+        component: Paper
       }
     ]
   },

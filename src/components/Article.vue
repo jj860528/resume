@@ -51,9 +51,9 @@ export default {
     image.src = this.imgTime;
     this.loading = false;
   },*/
-  methods: {
-    go: () => {
-      alert("暫無此頁");
+  methods:{
+    go: function(){
+      this.$router.push({path:'/paper',query:{id:this.article.id}});
     }
   },
   watch: {},
