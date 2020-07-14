@@ -102,7 +102,7 @@ export default {
     };
 
     //随机生成100个点
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 50; i++) {
       let x = Math.random() * canvas_width, //初始坐标
         y = Math.random() * canvas_height,
         xa = 2 * Math.random() - 1, //x速度

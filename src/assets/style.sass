@@ -323,7 +323,7 @@
                 display: -webkit-box
                 -webkit-box-orient: vertical
                 /*设置省略号在容器第四行文本后*/
-                -webkit-line-clamp: 4
+                -webkit-line-clamp: 3
                 overflow: hidden
 /*富文本編輯器*/
 .editor
@@ -372,3 +372,23 @@
         transform: rotate(0deg);
     100%
         transform: rotate(360deg)
+/*-------------------RWD----------------------*/
+@media only screen and (max-width: 578px)
+    .main-container
+        max-width: 100%
+    .skills
+        flex-flow: column !important
+    .article
+        flex: 0 0 90% !important
+    .project
+        flex-direction: column !important
+        width: 90% !important
+        height: 450px !important
+        .project-img
+            width: 100% !important
+            border-bottom-left-radius: 0px !important
+        .introduction
+            border-left: 0px solid #919696  !important
+            p,ul
+                line-height: 20px
+        
