@@ -53,8 +53,31 @@ export function setArticle(sort, data) {
     .catch(function (error) {
       console.error("Error writing document: ", error);
     });
-
 }
-
+/*function setproject() {
+  const Ref = db.collection("projects").doc();
+  let data = {}
+  data["name"] = "2048小遊戲"
+  data["ID"] = "project03"
+  data["img"] = "https://i.imgur.com/apVFMh2.png"
+  data["Date"] = new Date()
+  data["url"] = "https://jj860528.github.io/2048/"
+  data["introduction"] = "各種觸控方式的應用"
+  data["skills"] = [
+    {"skill":"Vue"},
+    {"skill":"滑鼠觸控"},
+    {"skill":"手指觸控"},
+    {"skill":"鍵盤控制"},
+  ]
+  let setSf = Ref.set(data)
+  .then(function () {
+    alert("Document successfully written!");
+  })
+    .catch(function (error) {
+      console.error("Error writing document: ", error);
+    });
+}
+setproject()
+*/
 //匯出至store
 export default { db, project, articles };

@@ -20,6 +20,9 @@ export default new Vuex.Store({
         name:"JavaScript",
         skills:[
           {skill:"使用 Vue.js 開發"},
+          {skill:"使用 React-hook 開發"},
+          {skill:"使用 redux 開發"},
+          {skill:"Antd 規劃網頁排版"},
           {skill:"熟悉 AJAX / JSON 串接 RESTful API"},
           {skill:"Element-UI 規劃網頁排版"},
           {skill:"Bootstrap 規劃網頁排版"}
